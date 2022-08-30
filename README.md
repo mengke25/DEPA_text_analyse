@@ -12,21 +12,21 @@ jieba.load_userdict('data/custom.txt')
 ## 3.分词
 cut = jieba.lcut(a)
 ## 4.去停用词
-stopword=[]
-with open('data/stopword.txt','r',encoding='utf-8') as f :
-    for line in f.readlines():
-        l = line.strip()
-        if l == '\\n':  #换行符
-            l = '\n'
-        if l == '\\u3000' : #制表符
-            l = '\u3000'
-        stopword.append(l)
-#去停用词 第一步
-x = np.array(cut)    #将分好的此列表转为数组
-y = np.array(stopword)   #将停用词转为数组
-z = x[~np.in1d(x,y)]
-#去停用词 第二部
-k = [i for i in z if len(i)>1 ]
+stopword=[]  
+with open('data/stopword.txt','r',encoding='utf-8') as f :  
+    for line in f.readlines():  
+        l = line.strip()  
+        if l == '\\n':  #换行符  
+            l = '\n'  
+        if l == '\\u3000' : #制表符  
+            l = '\u3000'  
+        stopword.append(l)  
+#去停用词 第一步  
+x = np.array(cut)    #将分好的此列表转为数组  
+y = np.array(stopword)   #将停用词转为数组  
+z = x[~np.in1d(x,y)]  
+#去停用词 第二部  
+k = [i for i in z if len(i)>1 ]  
 
 ## 5.计算词频，排序
 result = pd.DataFrame(k).groupby(0).size().sort_values(ascending=False) [:20]
