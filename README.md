@@ -8,9 +8,9 @@ import jieba.analyse
 import matplotlib.pyplot as plt  
 import wordcloud  
 ## 2.自定义词典 & 使用withopen导入文本
-jieba.load_userdict('data/custom.txt')
-with open('data/DEPA.txt','r',encoding='utf-8') as f:
-    a = f.read()
+jieba.load_userdict('data/custom.txt')  
+with open('data/DEPA.txt','r',encoding='utf-8') as f:  
+    a = f.read()  
     
 ## 3.分词
 cut = jieba.lcut(a)
