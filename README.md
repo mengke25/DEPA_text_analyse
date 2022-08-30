@@ -57,3 +57,5 @@ plt.show()
   
 #保存图片：默认为此代码保存的路径  
 wordcloud.to_file('DEPA.jpg') 
+
+![image](https://github.com/mengke25/DEPA_text_analyse/blob/main/DEPA.jpg)
