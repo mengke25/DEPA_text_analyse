@@ -1,12 +1,12 @@
 # DEPA_text_analyse
 # 案例：量化DEPA规则，提取词频
 ## 1.导入包
-import numpy as np
-import pandas as pd 
-import jieba
-import jieba.analyse
-import matplotlib.pyplot as plt
-import wordcloud
+import numpy as np  
+import pandas as pd  
+import jieba  
+import jieba.analyse  
+import matplotlib.pyplot as plt  
+import wordcloud  
 ## 2.自定义词典
 jieba.load_userdict('data/custom.txt')
 ## 3.分词
