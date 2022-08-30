@@ -22,6 +22,8 @@ import wordcloud
 
 
 jieba.load_userdict('data/custom.txt')
+with open('data/DEPA.txt','r',encoding='utf-8') as f:
+    a = f.read()
 
 
 # ## 3.分词
